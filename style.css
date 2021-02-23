@@ -1,0 +1,245 @@
+/*
+Theme Name:   	Storefront Child Theme
+Theme URI:    	https://github.com/DxDiagDx/ubricks-storefront-child-theme/
+Author:       	Evgeny Lukin
+Author URI:     http://usota.ru
+Template:     	storefront
+Description:  	This is a blank child theme for WooThemes StoreFront theme
+Version:      	1.0.0
+License:      	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  	storefront
+*/
+
+
+
+
+
+
+a:focus, input:focus, textarea:focus, button:focus {
+	outline: none;
+}
+
+/* На мобильных */
+@media (min-width: 320px) and (max-width: 768px) {
+	
+	/* товары в два столбца */
+	ul.products li.product {
+		width: 48%;
+		float: left;
+		clear: both;
+	}
+
+	ul.products li.product:nth-child(2n) {
+		clear: none;
+		float: right;
+	}
+	
+}
+
+
+/* Add handheld sidebar */
+.handheld-sidebar-toggle {
+    display: none;
+}
+
+@media (max-width:767px) {
+    .handheld-sidebar-toggle {
+        display: inline-block;
+		margin-bottom: 20px;
+    }
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    #secondary.active {
+        background-color: #fff;
+        position: fixed!important;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 288px!important;
+        height: 100%;
+        transition: all .3s;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        padding: 20px 20px 70px 20px;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0 0 6px rgb(0 0 0 / 70%);
+    }
+
+    #secondary {
+        background-color: #fff;
+        position: fixed!important;
+        top: 0;
+        left: -340px;
+        z-index: 999;
+        width: 288px!important;
+        height: 100%;
+        transition: all 0.3s;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
+/*
+ * Horisontal scroll breadcrambs
+ *
+ * Tablet & Mobile */
+@media (max-width: 767px) {
+	.woocommerce-breadcrumb {
+		display: flex;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		white-space: nowrap;
+	}
+	
+	.woocommerce-breadcrumb a {
+		display: inline-block;
+		white-space: nowrap;
+	}
+
+	.woocommerce-breadcrumb::-webkit-scrollbar {
+  		display: none;
+	}
+}
+
+.storefront-full-width-content.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li {
+	width: 18%;
+	float: left;
+	margin-right: 2%;	
+}
+
+.woa-top-bar .block .widget ul li {
+    padding: 6px 0 24px 6px;
+    font-size: 14px;
+}
+
+.site-info {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.info_dev {
+	color: #cccccc;
+	text-align: right;
+}
+
+.info_dev a {
+	color: #ababab !important;
+}
+
+.storefront-handheld-footer-bar ul li.contact>a:before {
+	content: "\f3c5";
+}
+
+.header-info-phone a {
+	font-size: 24px;
+}
+
+
+/* Desktop */ 
+@media (min-width: 768px) {
+	.col-full {
+		max-width: 1280px;
+	}
+	
+	.site-footer {
+    padding: 1.618em 0 0;
+	}
+	
+	.site-info {
+    padding: 1em 0;
+	}
+	
+	.footer-widgets {
+		padding-top: 1em;
+	}
+	
+	.storefront-primary-navigation {
+		background-color: #f9f9f9;
+		margin-top: 1em;
+	}
+	
+	.site-header {
+    border-bottom-color: #f9f9f9;
+		padding-top: 0;
+    padding-bottom: 0;
+	}
+	
+	.woocommerce-active .site-header .site-branding {
+    width: 25%;
+    float: left;
+    margin-right: 1%;
+	}
+	
+	.woocommerce-active .site-header .site-search {
+		margin-top: 12px;
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+    clear: none;
+	}
+	
+	.woocommerce-active .site-header .header-info {
+		width: 20%;
+		float: right;
+		text-align: right;
+	}
+	
+	.main-navigation ul.menu>li>a, .main-navigation ul.nav-menu>li>a {
+    padding: 1em 1em;
+	}
+	
+	.site-header-cart .cart-contents {
+		padding: 1em 0;
+	}
+	
+	#masthead {
+		padding-top: 1em;
+	}
+	
+}
+
+
+/* Tablet */ 
+@media (min-width: 481px) and (max-width: 767px) {
+	.hide-on-tablet {
+		display: none;
+	}
+}
+
+/* Tablet & Mobile */ 
+@media (max-width: 767px) {
+	.site-info {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	
+	.info_dev {
+		text-align: center;
+	}
+	
+}
+
+/* Mobile */ 
+@media (max-width: 480px) {
+	.hide-on-mobile {
+		display: none;
+	}
+	
+	h1.product_title.entry-title {
+		font-size: 2em;
+	}
+	
+	.single-product div.product p.price {
+    font-size: 1.6em;
+    margin: 1em 0;
+	}
+	
+}
